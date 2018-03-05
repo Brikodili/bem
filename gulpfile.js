@@ -9,12 +9,19 @@ gulp.task('sass', () => gulp.src('./src/styles/**/*.scss')
 gulp.task('html', () => gulp.src('./src/**/*.html')
     .pipe(gulp.dest('./build')));
 
-gulp.task('sass:watch', function () {
+gulp.task('images', () => gulp.src('./src/images/**/*')
+    .pipe(gulp.dest('./build/images')));
+
+gulp.task('sass:watch', () => {
     gulp.watch('./src/styles/**/*.scss', ['sass']);
 });
 
-gulp.task('html:watch', function () {
+gulp.task('html:watch', () => {
     gulp.watch('./src/**/*.html', ['html']);
+});
+
+gulp.task('images:watch', () => {
+    gulp.watch('./src/images/**/*', ['images']);
 });
 
 gulp.task('webserver', function () {
@@ -27,6 +34,8 @@ gulp.task('webserver', function () {
         }));
 });
 
-gulp.task('build', ['html', 'sass']);
+gulp.task('build', ['html', 'sass', 'images']);
 
-gulp.task('default', ['build', 'webserver', 'sass:watch', 'html:watch']);
+gulp.task('watch', ['html:watch', 'sass:watch', 'images:watch']);
+
+gulp.task('default', ['build', 'webserver', 'watch']);
