@@ -29,4 +29,4 @@ gulp.task('webserver', function () {
 
 gulp.task('build', ['html', 'sass']);
 
-gulp.task('default', gulp.series('build', 'webserver', 'sass:watch', 'html:watch'));
+gulp.task('default', ['build', 'webserver', 'sass:watch', 'html:watch']);
