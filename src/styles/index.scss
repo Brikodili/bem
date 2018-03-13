@@ -32,7 +32,7 @@ body{
   }
   .c-navbar__menu{
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: flex-start;
     padding: 1.5rem;
     .c-navbar__link {
@@ -91,8 +91,16 @@ body{
 }
 
 .c-about{
+  padding: 2.25rem;
+  p{
+    line-height: 1.75rem;
+  }
   .c-about__title{
     color: #088ca5;
+    font-size: 1.25rem;
+  }
+  .c-about__text{
+    padding-top: 1.5rem;
   }
 }
 
@@ -103,7 +111,6 @@ body{
     margin-right: auto;
     margin-left: auto;
     align-items: stretch;
-    width: 100vw;
   }
 }
 
