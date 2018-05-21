@@ -14,14 +14,17 @@ body{
 
 .c-navbar{
   background-color: #373c40;
+
   &__logo{
     padding: 1.25rem;
   }
+
   &__logo-item{
     font-size: 1.25rem;
     color: $color-white;
     text-decoration: none;
   }
+
   &__menu{
     display: none;
   }
@@ -31,20 +34,25 @@ body{
 
 
 @media only screen and (min-device-width : 768px) {
+
   .c-navbar{
+
     &__logo{
       display: none;
     }
+
     &__menu{
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-start;
       padding: 1.5rem;
     }
+
     &__link {
       list-style: none;
       padding: 0.75rem;
     }
+
     &__link-item{
       color: $color-white;
       text-decoration: none;
@@ -59,6 +67,7 @@ body{
   &__title{
     color: $color-white;
   }
+
   &__subtitle{
     padding-top: 5%;
     color: #b6cece;
@@ -70,11 +79,13 @@ body{
     display: flex;
     width: 100%;
     justify-content: space-between;
+
   &__text{
     font-size: 0.85rem;
     color: #95859f;
     padding: 2rem;
   }
+
   &__arrow{
     background-color: #bc3184;
     padding: 2rem;
@@ -84,10 +95,12 @@ body{
 
 .c-about{
   padding: 2.25rem;
+
   &__title{
     color: #088ca5;
     font-size: 1.25rem;
   }
+
   &__text{
     line-height: 1.5rem;
     padding-top: 1rem;
@@ -99,6 +112,7 @@ body{
 
 .c-cards {
   font-size: 0;
+
   &__img {
     display: inline-block;
     width: 33.33%;
@@ -129,9 +143,11 @@ body{
 
 
 @media (max-width: 480px){
+
   .c-cards__img {
     width: 100%;
   }
+
   .c-about__text{
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
